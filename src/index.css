@@ -1,68 +1,343 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Importing Google font - Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease;
+}
+.container {
+    display: flex;
+    width: 850px;
+    gap: 70px;
+    padding: 60px 40px;
+    background: #fff;
+    border-radius: 10px;
+    align-items: flex-end;
+    justify-content: space-between;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.hangman-box img {
+    user-select: none;
+    max-width: 270px;
+}
+.hangman-box h1 {
+    font-size: 1.45rem;
+    text-align: center;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.game-box .word-display {
+    gap: 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.word-display .letter {
+    width: 28px;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #000;
+}
+.word-display .letter.guessed {
+    margin: -40px 0 35px;
+    border-color: transparent;
+}
+.game-box h4 {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.game-box h4 b {
+    font-weight: 600;
+}
+.game-box .guesses-text b {
+    color: #ff0000;
+}
+.game-box .keyboard {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    justify-content: center;
+}
+:where(.game-modal, .keyboard) button {
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background: #5E63BA;
+}
+.keyboard button {
+    padding: 7px;
+    width: calc(100% / 9 - 5px);
+}
+.keyboard button[disabled] {
+    pointer-events: none;
+    opacity: 0.6;
+}
+:where(.game-modal, .keyboard) button:hover {
+    background: #8286c9;
+}
+.game-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 0 10px;
+    transition: opacity 0.4s ease;
+}
+.game-modal.show {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.4s 0.4s ease;
+}
+.game-modal .content {
+    padding: 30px;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.game-modal img {
+    max-width: 130px;
+    margin-bottom: 20px;
+}
+.game-modal img[src="images/victory.gif"] {
+    margin-left: -10px;
+}
+.game-modal h4 {
+    font-size: 1.53rem;
+}
+.game-modal p {
+    font-size: 1.15rem;
+    margin: 15px 0 30px;
+    font-weight: 500;
+}
+.game-modal p b {
+    color: #5E63BA;
+    font-weight: 600;
+}
+.game-modal button {
+    padding: 12px 23px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+@media (max-width: 782px) {
+    .container {
+        flex-direction: column;
+        padding: 30px 15px;
+        align-items: center;
+    }
+    .hangman-box img {
+        max-width: 200px;
+    }
+    .hangman-box h1 {
+        display: none;
+    }
+    .game-box h4 {
+        font-size: 1rem;
+    }
+    .word-display .letter {
+        margin-bottom: 35px;
+        font-size: 1.7rem;
+    }
+    .word-display .letter.guessed {
+        margin: -35px 0 25px;
+    }
+    .game-modal img {
+        max-width: 120px;
+    }
+    .game-modal h4 {
+        font-size: 1.45rem;
+    }
+    .game-modal p {
+        font-size: 1.1rem;
+    }
+    .game-modal button {
+        padding: 10px 18px;
+    }
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.login-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 0 10px;
+    transition: opacity 0.4s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.login-modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.login-modal .content {
+    padding: 30px;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.login-modal h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.login-modal input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-modal button {
+    padding: 12px 23px;
+    background: #5E63BA;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.login-modal button:hover {
+    background: #8286c9;
+}
+
+.score-board {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-weight: 600;
+    color: #333;
+    z-index: 100;
+}
+
+.score-board p {
+    margin-bottom: 5px;
+}
+
+.score-board span {
+    color: #5E63BA;
+    font-weight: 700;
+}
+
+@media (max-width: 782px) {
+    .container {
+        flex-direction: column;
+        padding: 30px 15px;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+    }
+    .hangman-box img {
+        max-width: 200px;
+    }
+    .hangman-box h1 {
+        display: none;
+    }
+    .game-box h4 {
+        font-size: 1rem;
+    }
+    .word-display .letter {
+        margin-bottom: 35px;
+        font-size: 1.7rem;
+    }
+    .word-display .letter.guessed {
+        margin: -35px 0 25px;
+    }
+    .game-modal img {
+        max-width: 120px;
+    }
+    .game-modal h4 {
+        font-size: 1.45rem;
+    }
+    .game-modal p {
+        font-size: 1.1rem;
+    }
+    .game-modal button {
+        padding: 10px 18px;
+    }
+    .score-board {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.95);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 10px;
+    }
+    .hangman-box img {
+        max-width: 150px;
+    }
+    .word-display .letter {
+        width: 24px;
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+    .keyboard button {
+        width: calc(100% / 7 - 5px);
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    .game-modal .content {
+        padding: 20px;
+    }
 }
