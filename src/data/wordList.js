@@ -955,7 +955,7 @@ export const wordList = [
     hint: "Sofreu muito mas não pecou contra Deus (Jó).",
   },
   {
-    word: "bilaque",
+    word: "balaque",
     hint: "Rei que contratou Balaão para amaldiçoar Israel.",
   },
   {
@@ -1515,10 +1515,6 @@ export const wordList = [
   {
     word: "fidelidade",
     hint: "Lealdade a Deus.",
-  },
-  {
-    word: "dominio proprio",
-    hint: "Controle sobre si mesmo.",
   },
   {
     word: "alegria",

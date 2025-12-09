@@ -1,4 +1,4 @@
-# Jogo da Forca (Hangman Game) 🎮
+# Jogo da Forca Biblico (Hangman Game) 🎮
 
 Bem-vindo ao **Jogo da Forca**! Este projeto é uma versão moderna e interativa do clássico jogo de palavras, agora reconstruído com **ReactJS** e **Vite** para oferecer uma experiência de usuário superior, responsiva e visualmente atraente.
 
