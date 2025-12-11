@@ -958,10 +958,10 @@ export const wordList = [
     word: "balaque",
     hint: "Rei que contratou Balaão para amaldiçoar Israel.",
   },
-  {
-    word: "balaao",
-    hint: "Profeta cuja jumenta falou.",
-  },
+{
+  word: "balaao",
+  hint: "Profeta contratado por Balaque para amaldiçoar Israel."
+},
 
   // Mais Objetos
   {
@@ -1728,4 +1728,70 @@ export const wordList = [
     word: "amanha",
     hint: "Não vos inquieteis pelo ___.",
   },
+  {
+  word: "bartimeu",
+  hint: "Cego curado por Jesus perto de Jericó."
+},
+{
+  word: "barjesus",
+  hint: "Mago que resistiu a Paulo e ficou cego."
+},
+// Personagens Difíceis
+  {
+    word: "nabucodonosor",
+    hint: "Rei da Babilônia que destruiu Jerusalém.",
+  },
+  {
+    word: "melquisedeque",
+    hint: "Rei de Salém e sacerdote do Deus Altíssimo.",
+  },
+  {
+    word: "zorrobabel",
+    hint: "Liderou o primeiro grupo de judeus no retorno do exílio.",
+  },
+  {
+    word: "mefibosete",
+    hint: "Neto de Saul que era coxo de ambos os pés.",
+  },
+  {
+    word: "epafrodito",
+    hint: "Colaborador de Paulo mencionado na carta aos Filipenses.",
+  },
+  {
+    word: "onesiforo",
+    hint: "Visitou Paulo na prisão em Roma e não se envergonhou dele.",
+  },
+  {
+    word: "boanerges",
+    hint: "Apelido dado por Jesus a Tiago e João, filhos do trovão.",
+  },
+  {
+    word: "gamaliel",
+    hint: "Mestre da lei que foi tutor de Paulo.",
+  },
+  {
+    word: "bezalel",
+    hint: "Artesão cheio do Espírito para construir o Tabernáculo.",
+  },
+  {
+    word: "oliabe",
+    hint: "Assistente de Bezalel na construção do Tabernáculo.",
+  },
+  {
+    word: "quedorlaomer",
+    hint: "Rei de Elão derrotado por Abraão.",
+  },
+  {
+    word: "senqueribe",
+    hint: "Rei da Assíria que cercou Jerusalém nos dias de Ezequias.",
+  },
+  {
+    word: "belsazar",
+    hint: "Rei que viu a escrita na parede.",
+  },
+  {
+    word: "hama",
+    hint: "Inimigo dos judeus enforcado na forca que preparou.",
+  },
+
 ];
