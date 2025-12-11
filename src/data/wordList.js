@@ -688,11 +688,11 @@ export const wordList = [
   },
   {
     word: "alfa",
-    hint: "Primeira letra grega, Jesus é o Alfa e o Ômega.",
+    hint: "Primeira letra grega.",
   },
   {
     word: "omega",
-    hint: "Última letra grega, Jesus é o Alfa e o Ômega.",
+    hint: "Última letra grega.",
   },
 
   // Animais na Bíblia
