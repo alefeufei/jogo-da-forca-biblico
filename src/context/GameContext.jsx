@@ -9,7 +9,7 @@ export const useGame = () => useContext(GameContext);
 export const GameProvider = ({ children }) => {
     const [playerName, setPlayerName] = useState("");
     const [score, setScore] = useState(0);
-    const [lastScore, setLastScore] = useState(null);
+    const [scoreHistory, setScoreHistory] = useState([]); // Array of last 3 scores with date/time
     const [gameStatus, setGameStatus] = useState('login'); // login, playing, won, lost
     const [currentWord, setCurrentWord] = useState("");
     const [currentHint, setCurrentHint] = useState("");
@@ -39,7 +39,7 @@ export const GameProvider = ({ children }) => {
             if (user) {
                 setPlayerName(user.name);
                 setScore(user.score || 0);
-                setLastScore(user.lastScore || null);
+                setScoreHistory(user.scoreHistory || []);
                 setGameStatus('playing');
                 startNewGame(user.lastDifficulty || 'easy'); // Pass difficulty to startNewGame if needed, or set state first
                 setDifficulty(user.lastDifficulty || 'easy');
@@ -106,13 +106,13 @@ export const GameProvider = ({ children }) => {
 
         if (currentUser) {
             setScore(currentUser.score || 0);
-            setLastScore(currentUser.lastScore || null);
+            setScoreHistory(currentUser.scoreHistory || []);
         } else {
             // New user
-            const newUser = { name: trimmedName, score: 0, lastScore: null, lastDifficulty: currentDifficulty };
+            const newUser = { name: trimmedName, score: 0, scoreHistory: [], lastDifficulty: currentDifficulty };
             setUsers(prev => [...prev, newUser]);
             setScore(0);
-            setLastScore(null);
+            setScoreHistory([]);
         }
 
         setDifficulty(currentDifficulty);
@@ -126,7 +126,7 @@ export const GameProvider = ({ children }) => {
         // (Actually useEffect [score] handles the user list update, but lets be safe)
         setPlayerName("");
         setScore(0);
-        setLastScore(null);
+        setScoreHistory([]);
         setGameStatus('login');
         localStorage.removeItem("hangman_active_user");
     };
@@ -184,24 +184,28 @@ export const GameProvider = ({ children }) => {
     const saveScore = () => {
         const now = new Date();
         const dateString = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}`;
+        const timeString = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
         const scoreData = {
             score: score,
-            date: dateString
+            date: dateString,
+            time: timeString
         };
         
-        setLastScore(scoreData);
+        // Add new score to history and keep only last 3
+        const newHistory = [scoreData, ...scoreHistory].slice(0, 3);
+        setScoreHistory(newHistory);
 
         // Update user data
         setUsers(prevUsers => {
             const updatedUsers = prevUsers.map(user => {
                 if (user.name === playerName) {
-                    return { ...user, lastScore: scoreData, score: score }; // Keep highest score or current? User asked for "points of other users", implying accumulation or high score. I'll stick to current score state for now, but maybe we should track 'highScore'. Let's keep it simple: 'score' is current accumulated score.
+                    return { ...user, scoreHistory: newHistory, score: score };
                 }
                 return user;
             });
             // If for some reason user wasn't found (shouldn't happen), add them
             if (!updatedUsers.find(u => u.name === playerName)) {
-                updatedUsers.push({ name: playerName, score: score, lastScore: scoreData, lastDifficulty: difficulty });
+                updatedUsers.push({ name: playerName, score: score, scoreHistory: newHistory, lastDifficulty: difficulty });
             }
             return updatedUsers;
         });
@@ -215,7 +219,7 @@ export const GameProvider = ({ children }) => {
         <GameContext.Provider value={{
             playerName,
             score,
-            lastScore,
+            scoreHistory,
             gameStatus,
             currentWord,
             currentHint,
