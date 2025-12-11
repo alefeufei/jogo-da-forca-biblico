@@ -1301,10 +1301,6 @@ export const wordList = [
     hint: "Quem tem o Filho tem a ___.",
   },
   {
-    word: "bom pastor",
-    hint: "Aquele que dá a vida pelas ovelhas.",
-  },
-  {
     word: "advogado",
     hint: "Temos um junto ao Pai, Jesus Cristo.",
   },
