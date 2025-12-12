@@ -1782,7 +1782,7 @@ export const wordList = [
     hint: "Rei de Elão derrotado por Abraão.",
   },
   {
-    word: "senqueribe",
+    word: "senaqueribe",
     hint: "Rei da Assíria que cercou Jerusalém nos dias de Ezequias.",
   },
   {
