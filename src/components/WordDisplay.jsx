@@ -6,11 +6,14 @@ const WordDisplay = () => {
 
     return (
         <ul className="word-display">
-            {currentWord.split("").map((letter, index) => (
-                <li key={index} className={`letter ${guessedLetters.includes(letter) || gameStatus !== 'playing' ? "guessed" : ""}`}>
-                    {guessedLetters.includes(letter) || gameStatus !== 'playing' ? letter : ""}
-                </li>
-            ))}
+            {currentWord.split("").map((letter, index) => {
+                const isSpace = letter === ' ';
+                return (
+                    <li key={index} className={`letter ${isSpace ? "space" : ""} ${!isSpace && (guessedLetters.includes(letter) || gameStatus !== 'playing') ? "guessed" : ""}`}>
+                        {isSpace || guessedLetters.includes(letter) || gameStatus !== 'playing' ? letter : ""}
+                    </li>
+                );
+            })}
         </ul>
     );
 };

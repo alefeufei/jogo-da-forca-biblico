@@ -441,3 +441,9 @@ body {
         padding: 20px;
     }
 }
+
+.word-display .letter.space {
+    border-bottom: none !important;
+    width: 15px; /* Smaller width for spacing */
+    margin-bottom: 40px;
+}

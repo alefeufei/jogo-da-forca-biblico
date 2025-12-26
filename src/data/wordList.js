@@ -850,19 +850,7 @@ export const wordList = [
     word: "acsa",
     hint: "Filha de Calebe que pediu fontes de água.",
   },
-  {
-    word: "baraque",
-    hint: "General que lutou ao lado de Débora.",
-  },
-  {
-    word: "jael",
-    hint: "Mulher que derrotou o general Sísera.",
-  },
-  {
-    word: "jefta",
-    hint: "Juiz que fez um voto precipitado.",
-  },
-  {
+    {
     word: "noemi",
     hint: "Sogra de Rute.",
   },
@@ -918,11 +906,7 @@ export const wordList = [
     word: "geazi",
     hint: "Servo de Eliseu que ficou leproso por ganância.",
   },
-  {
-    word: "osias",
-    hint: "Rei que ficou leproso por oferecer incenso.",
-  },
-  {
+    {
     word: "ezequias",
     hint: "Rei que orou e ganhou mais 15 anos de vida.",
   },
@@ -943,7 +927,7 @@ export const wordList = [
     hint: "Copero do rei que reconstruiu os muros de Jerusalém.",
   },
   {
-    word: "vashti",
+    word: "vasti",
     hint: "Rainha deposta antes de Ester.",
   },
   {
@@ -951,7 +935,7 @@ export const wordList = [
     hint: "Inimigo dos judeus no livro de Ester.",
   },
   {
-    word: "job",
+    word: "jo",
     hint: "Sofreu muito mas não pecou contra Deus (Jó).",
   },
   {
@@ -995,10 +979,6 @@ export const wordList = [
   {
     word: "alforge",
     hint: "Bolsa de pastor usada por Davi.",
-  },
-  {
-    word: "citar",
-    hint: "Instrumento musical de cordas (Cítara).",
   },
   {
     word: "harpa",
@@ -1140,11 +1120,7 @@ export const wordList = [
     word: "emanuel",
     hint: "Nome profético de Jesus em Isaías.",
   },
-  {
-    word: "shibboleth",
-    hint: "Palavra usada como senha para distinguir efraimitas.",
-  },
-  {
+   {
     word: "maná",
     hint: "Alimento que caiu do céu no deserto.",
   },
@@ -1260,10 +1236,7 @@ export const wordList = [
     word: "sicomoro",
     hint: "Árvore em que Zaqueu subiu.",
   },
-  {
-    word: "absinto",
-    hint: "Erva amarga ou estrela do Apocalipse.",
-  },
+
   {
     word: "cominho",
     hint: "Especiaria dizimada pelos fariseus.",

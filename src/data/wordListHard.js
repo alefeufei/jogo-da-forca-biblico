@@ -688,6 +688,50 @@ export const wordListHard = [
 {
   word: "zor",
   hint: "Cidade fenícia mencionada entre aliados."
-}
-
+},
+// Removido dos fáceis
+{
+    word: "shibboleth",
+    hint: "Palavra usada como senha para distinguir efraimitas.",
+  },
+{
+    word: "baraque",
+    hint: "General que lutou ao lado de Débora.",
+  },
+  {
+    word: "jael",
+    hint: "Mulher que derrotou o general Sísera.",
+  },
+  {
+    word: "jefta",
+    hint: "Juiz que fez um voto precipitado.",
+  },
+  {
+    word: "osias",
+    hint: "Rei que ficou leproso por oferecer incenso.",
+  },
+  {
+    word: "absinto",
+    hint: "Erva amarga ou estrela do Apocalipse.",
+  },
+  {
+    word: "sambalate",
+    hint: "Governante de Samaria na época de Neemias.",
+  },
+  {
+    word: "benjamim",
+    hint: "__________ não é filho de Lia, esposa de Jacó.",
+  },
+  {
+    word: "dina",
+    hint: "Descendente de Jacó, que não faz parte das 12 tribos",
+  },
+  {
+    word: "sete",
+    hint: "nome do terceiro filho de Adão e Eva.",
+  },
+  {
+    word: "lingua mentirosa",
+    hint: "O que Deus odeia."
+  }
 ];

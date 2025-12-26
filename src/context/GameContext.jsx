@@ -164,7 +164,7 @@ export const GameProvider = ({ children }) => {
 
         if (currentWord.includes(letter)) {
             const isWordComplete = currentWord.split('').every(char => 
-                guessedLetters.includes(char) || char === letter
+                char === ' ' || guessedLetters.includes(char) || char === letter
             );
             if (isWordComplete) {
                 setGameStatus('won');
