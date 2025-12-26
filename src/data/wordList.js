@@ -227,7 +227,7 @@ export const wordList = [
     hint: "Autor do segundo Evangelho, primo de Barnabé.",
   },
   {
-    word: "lazar",
+    word: "lazaro",
     hint: "Amigo de Jesus que foi ressuscitado após quatro dias.",
   },
   {
@@ -795,7 +795,7 @@ export const wordList = [
     hint: "Um dos três filhos de Noé.",
   },
   {
-    word: "lot",
+    word: "lo",
     hint: "Sobrinho de Abraão que morou em Sodoma.",
   },
   {
@@ -1062,43 +1062,7 @@ export const wordList = [
     word: "malaquias",
     hint: "O último livro do Antigo Testamento.",
   },
-  {
-    word: "galatas",
-    hint: "Carta de Paulo sobre a liberdade cristã.",
-  },
-  {
-    word: "efesios",
-    hint: "Carta sobre a armadura de Deus.",
-  },
-  {
-    word: "filipenses",
-    hint: "Carta da alegria.",
-  },
-  {
-    word: "colossenses",
-    hint: "Carta sobre a supremacia de Cristo.",
-  },
-  {
-    word: "tessalonicenses",
-    hint: "Cartas sobre a volta de Cristo.",
-  },
-  {
-    word: "filemom",
-    hint: "Carta de Paulo sobre um escravo fugitivo.",
-  },
-  {
-    word: "hebreus",
-    hint: "Livro sobre a superioridade de Cristo e a fé.",
-  },
-  {
-    word: "tiago",
-    hint: "Carta que diz que a fé sem obras é morta.",
-  },
-  {
-    word: "judas",
-    hint: "Pequena carta antes do Apocalipse.",
-  },
-
+ 
   // Misturados
   {
     word: "betel",

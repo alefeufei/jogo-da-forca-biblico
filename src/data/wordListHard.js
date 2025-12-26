@@ -733,5 +733,42 @@ export const wordListHard = [
   {
     word: "lingua mentirosa",
     hint: "O que Deus odeia."
-  }
+  },
+   {
+    word: "galatas",
+    hint: "Carta de Paulo sobre a liberdade cristã.",
+  },
+  {
+    word: "efesios",
+    hint: "Carta sobre a armadura de Deus.",
+  },
+  {
+    word: "filipenses",
+    hint: "Carta da alegria.",
+  },
+  {
+    word: "colossenses",
+    hint: "Carta sobre a supremacia de Cristo.",
+  },
+  {
+    word: "tessalonicenses",
+    hint: "Cartas sobre a volta de Cristo.",
+  },
+  {
+    word: "filemom",
+    hint: "Carta de Paulo sobre um escravo fugitivo.",
+  },
+  {
+    word: "hebreus",
+    hint: "Livro sobre a superioridade de Cristo e a fé.",
+  },
+  {
+    word: "tiago",
+    hint: "Carta que diz que a fé sem obras é morta.",
+  },
+  {
+    word: "judas",
+    hint: "Pequena carta antes do Apocalipse.",
+  },
+
 ];
