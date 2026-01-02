@@ -1,5 +1,6 @@
 export const wordList = [
-  // Personagens do Antigo Testamento
+
+//Personagens do Antigo Testamento
   {
     word: "adao",
     hint: "O primeiro homem criado por Deus.",
@@ -771,7 +772,7 @@ export const wordList = [
     hint: "Neto de Adão, em seu tempo começou-se a invocar o nome do Senhor.",
   },
   {
-    word: "metusalem",
+    word: "matusalem",
     hint: "O homem mais velho da Bíblia.",
   },
   {
@@ -1695,10 +1696,6 @@ export const wordList = [
     hint: "Colaborador de Paulo mencionado na carta aos Filipenses.",
   },
   {
-    word: "onesiforo",
-    hint: "Visitou Paulo na prisão em Roma e não se envergonhou dele.",
-  },
-  {
     word: "boanerges",
     hint: "Apelido dado por Jesus a Tiago e João, filhos do trovão.",
   },
@@ -1709,10 +1706,6 @@ export const wordList = [
   {
     word: "bezalel",
     hint: "Artesão cheio do Espírito para construir o Tabernáculo.",
-  },
-  {
-    word: "oliabe",
-    hint: "Assistente de Bezalel na construção do Tabernáculo.",
   },
   {
     word: "quedorlaomer",
